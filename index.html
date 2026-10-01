@@ -122,7 +122,7 @@
       </div>
 
       <div class="section-title" style="text-decoration:underline">Bio</div>
-      <div class="item">2022-pres: Quantitative Researcher, <a href="https://www.gresearch.com">G-Research</a></div>
+      <div class="item">2022-2026: Quantitative Researcher, <a href="https://www.gresearch.com">G-Research</a></div>
       <div class="item">2020-2022: Head of Artificial Intelligence, <a href="https://almapay.com">Alma</a></div>
       <div class="item">2013-2018: Director of Studies, <a href="https://www.dpmms.cam.ac.uk">University of Cambridge</a></div>
       <div class="item">2013-2018: Fellow, <a href="https://www.joh.cam.ac.uk">St John's College, Cambridge</a></div>
@@ -131,6 +131,25 @@
       <div class="item">2005-2009: Élève Normalien, <a href="http://www.ens-lyon.fr">ENS Lyon</a></div>
 
       <div class="section-title" style="text-decoration:underline">Selected Publications</div>
+      <div class="paper">
+        Weave of Formal Thought
+        <span class="noscript-visible">
+          [<a href="https://github.com/alexbouayad/spectral-target-encoding/blob/main/spectral-target-encoding.pdf">PDF</a>]
+          [<a href="https://github.com/alexandrebouayad/spectral-target-encoding">GitHub</a>]
+        </span>
+        <div class="paper-journal">submitted (2022)</div>
+        <div class="paper-link">
+          <span class="noscript-invisible">
+            [<span class="toggle abs" id="abs-4"><span class="color">Abstract</span></span>]
+            [<a href="https://github.com/alexbouayad/spectral-target-encoding/blob/main/spectral-target-encoding.pdf">PDF</a>]
+            [<a href="https://github.com/alexandrebouayad/spectral-target-encoding">GitHub</a>]
+          </span>
+        </div>
+        <div id="toggle-abs-4" class="abstract">
+          Large language models (LLMs) attain remarkable surface fluency on code, yet they do not formally guarantee the syntactic validity of their output, nor do they typically leverage the hierarchical structure that defines the target language. While existing constrained-decoding frameworks (e.g., XGrammar, Guidance, Outlines, SynCode) offer a solution to the former, they predominantly operate under rigid assumptions that preclude critical lexical mechanisms relied upon by modern parsers — including context-sensitive lexing (e.g., Pythonic indentation), maximal-munch tokenization, and keyword extraction — and only approximate the masking of invalid subword tokens, sacrificing completeness. For the latter, modern code LLMs inject grammatical structure during training through predetermined policies rather than learning which structural information to expose. In this work, we introduce Weave of Formal Thought (WoFT), an overarching paradigm that unites rigorous syntactic validation with learned structural representations. First, we present a formal engine and constrained decoder that is sound and complete with respect to the full Tree-sitter specification by augmenting generalized LR (GLR) parsing with a novel speculative-lexing construction that maintains concurrent lexer-state hypotheses synchronized with the GLR graph-structured stack; the decoder admits every subword token that extends to a valid program prefix and rejects every token that does not. Second, we present a latent-variable fine-tuning method that trains the language model to interleave non-terminal grammar symbols directly into the generation process. Utilizing the reweighted wake-sleep (RWS) algorithm to optimize the importance-weighted evidence lower bound (IW-ELBO) of the surface text, the model learns to selectively retain formal derivations as an adaptive structural scratchpad. Across ten diverse programming languages spanning multiple paradigms (Python, C, C#, Go, Java, Rust, TypeScript, Haskell, Bash, HTML), fine-tuning StarCoder2-3B with our RWS objective consistently outperforms text-only SFT baselines, achieving up to a 14.9% relative reduction in surface-token cross-entropy (11.6% average at convergence, 14.6% at iso-step), demonstrating that discretionary latent syntax recovers critical structural information that flat autoregressive training discards. Our code and implementation are publicly available at <a href="https://github.com/alexbouayad/formal">https://github.com/alexbouayad/formal</a>.
+        </div>
+      </div>
+      
       <div class="paper">
         Spectral Target Encoding
         <span class="noscript-visible">
